@@ -10,29 +10,28 @@ Proyek ini berfokus pada implementasi dan pemahaman konsep inti PBO:
 - 🔹 **Polimorfisme** melalui **method overriding** & **method overloading**  
 
 ---
-
 ## 📂 Struktur Proyek  
 
 Berikut adalah struktur folder dalam repositori ini:  
 
+```plaintext
 ├── README.md
 ├── AbstractClass
-│ ├── Karyawan.java (Kelas Abstrak)
-│ ├── KaryawanTetap.java
-│ ├── KaryawanKontrak.java
-│ └── MainAbstract.java (Demo Abstrak)
+│   ├── Karyawan.java       (Kelas Abstrak)
+│   ├── KaryawanTetap.java
+│   ├── KaryawanKontrak.java
+│   └── MainAbstract.java   (Demo Abstrak)
 ├── Interface
-│ ├── BangunDatar.java (Interface)
-│ ├── Lingkaran.java
-│ ├── Persegi.java
-│ └── MainInterface.java (Demo Interface)
+│   ├── BangunDatar.java    (Interface)
+│   ├── Lingkaran.java
+│   ├── Persegi.java
+│   └── MainInterface.java  (Demo Interface)
 ├── OverloadOverride
-│ ├── Kendaraan.java
-│ ├── Mobil.java (Contoh Override)
-│ ├── Kalkulator.java (Contoh Overload)
-│ └── MainDemo.java (Demo Polimorfisme)
+│   ├── Kendaraan.java
+│   ├── Mobil.java          (Contoh Override)
+│   ├── Kalkulator.java     (Contoh Overload)
+│   └── MainDemo.java       (Demo Polimorfisme)
 └── ...
-
 ---
 
 ## 📖 Ringkasan Konsep  
