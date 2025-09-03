@@ -9,20 +9,24 @@ package classabstract;
  * @author Husain
  */
 public class MainAbstract {
-
     public static void main(String[] args) {
-        // Membuat objek dari kelas turunan (konkret)
-        KaryawanTetap karyawanTetap = new KaryawanTetap("Budi Santoso", "E001", 5000000);
-        KaryawanKontrak karyawanKontrak = new KaryawanKontrak("Siti Aminah", "E002", 50000, 160);
+        // Membuat objek dari kelas konkret
+        Singa singa = new Singa("Raja Singa");
+        Mawar mawar = new Mawar("Mawar Merah");
 
-        // Menggunakan metode dari objek karyawan
-        System.out.println("Detail Karyawan Tetap:");
-        karyawanTetap.tampilkanDetail();
-        System.out.println("Gaji: Rp" + karyawanTetap.hitungGaji());
-        System.out.println("---------------------------------");
+        System.out.println("Detail Makhluk Hidup:");
+        System.out.println("---------------------");
 
-        System.out.println("Detail Karyawan Kontrak:");
-        karyawanKontrak.tampilkanDetail();
-        System.out.println("Gaji: Rp" + karyawanKontrak.hitungGaji());
+        // Memanggil metode dari objek Singa
+        singa.bernafas();
+        singa.bergerak();
+        singa.makan();
+        System.out.println("---------------------");
+
+        // Memanggil metode dari objek Mawar
+        mawar.bernafas();
+        mawar.bergerak();
+        mawar.berfotosintesis();
     }
-}
+   }
+
