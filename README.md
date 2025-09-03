@@ -1,84 +1,77 @@
-# Laporan Praktikum Pemrograman Berbasis Objek (PBO) Pertemuan Ketiga
+# 📘 Laporan Praktikum PBO – Pertemuan Ketiga  
 
-## Konsep Dasar dalam PBO: Abstraksi & Polimorfisme
+## 🔑 Konsep Dasar dalam PBO: Abstraksi & Polimorfisme  
 
-### Deskripsi
-Repositori ini berisi kode-kode praktikum untuk mata kuliah Pemrograman Berbasis Objek (PBO). Proyek ini berfokus pada implementasi dan pemahaman konsep-konsep inti PBO: **abstraksi** melalui **kelas abstrak** dan **interface**, serta **polimorfisme** melalui **method overriding** dan **method overloading**.
+### 📝 Deskripsi  
+Repositori ini berisi kode-kode praktikum untuk mata kuliah **Pemrograman Berbasis Objek (PBO)**.  
+Proyek ini berfokus pada implementasi dan pemahaman konsep inti PBO:  
+
+- 🔹 **Abstraksi** melalui **kelas abstrak** & **interface**  
+- 🔹 **Polimorfisme** melalui **method overriding** & **method overloading**  
 
 ---
 
-### Struktur Proyek
+## 📂 Struktur Proyek  
 
-Berikut adalah struktur file dalam repositori ini:
+Berikut adalah struktur folder dalam repositori ini:  
+
 ├── README.md
 ├── AbstractClass
-│   ├── Karyawan.java       (Kelas Abstrak)
-│   ├── KaryawanTetap.java
-│   ├── KaryawanKontrak.java
-│   └── MainAbstract.java   (Kelas utama untuk demo)
+│ ├── Karyawan.java (Kelas Abstrak)
+│ ├── KaryawanTetap.java
+│ ├── KaryawanKontrak.java
+│ └── MainAbstract.java (Demo Abstrak)
 ├── Interface
-│   ├── BangunDatar.java    (Interface)
-│   ├── Lingkaran.java
-│   ├── Persegi.java
-│   └── MainInterface.java  (Kelas utama untuk demo)
+│ ├── BangunDatar.java (Interface)
+│ ├── Lingkaran.java
+│ ├── Persegi.java
+│ └── MainInterface.java (Demo Interface)
 ├── OverloadOverride
-│   ├── Kendaraan.java
-│   ├── Mobil.java          (Menggunakan Override)
-│   ├── Kalkulator.java     (Menggunakan Overload)
-│   └── MainDemo.java       (Kelas utama untuk demo)
+│ ├── Kendaraan.java
+│ ├── Mobil.java (Contoh Override)
+│ ├── Kalkulator.java (Contoh Overload)
+│ └── MainDemo.java (Demo Polimorfisme)
 └── ...
 
+---
+
+## 📖 Ringkasan Konsep  
+
+### 1️⃣ Kelas Abstrak vs. Interface  
+
+Keduanya dipakai untuk mencapai **abstraksi** (menyembunyikan detail implementasi).  
+
+| 🔍 Fitur | 🏷️ **Kelas Abstrak** | 🏷️ **Interface** |
+| :---: | :--- | :--- |
+| **Implementasi** | Bisa memiliki **method abstrak** & **method konkret** | Method default-nya **abstrak** (kecuali `default`/`static`) |
+| **Hubungan** | Turunan menggunakan `extends` → hanya boleh **1 superclass** | Turunan menggunakan `implements` → bisa **multi-interface** |
+| **Penggunaan** | Cocok untuk hubungan **is-a** (contoh: `Mobil` adalah `Kendaraan`) | Cocok untuk mendefinisikan **kemampuan** (contoh: `Mobil` bisa `berjalan`, `berhenti`) |
 
 ---
 
-### Ringkasan Konsep
+### 2️⃣ Override vs. Overload  
 
-#### 1. Kelas Abstrak vs. Interface
+Keduanya merupakan bentuk **polimorfisme** (satu nama, banyak perilaku).  
 
-Kedua konsep ini digunakan untuk mencapai **abstraksi**, yaitu menyembunyikan detail implementasi.
+| 🔍 Konsep | ⚡ **Overriding** | ⚡ **Overloading** |
+| :---: | :--- | :--- |
+| **Definisi** | Menimpa method milik **kelas induk** dengan implementasi baru | Membuat beberapa method dengan **nama sama** tapi parameter berbeda |
+| **Letak** | Terjadi di antara **kelas induk & turunan** | Terjadi dalam **kelas yang sama** |
+| **Aturan** | Nama & parameter **harus sama** | Nama **sama**, parameter **berbeda** |
 
-| Fitur | **Kelas Abstrak** | **Interface** |
-| :--- | :--- | :--- |
-| **Implementasi** | Bisa memiliki metode abstrak (tanpa implementasi) dan metode konkret (dengan implementasi). | Semua metode (sebelum Java 8) adalah abstrak secara implisit. Tidak ada implementasi. |
-| **Hubungan** | Kelas turunan menggunakan `extends`. Satu kelas hanya bisa `extends` satu kelas abstrak. | Kelas pengimplementasi menggunakan `implements`. Satu kelas bisa `implements` banyak interface. |
-| **Penggunaan** | Cocok untuk hubungan `is-a` (misalnya, `Mobil` adalah `Kendaraan`). | Cocok untuk mendefinisikan kemampuan atau "kontrak" (misalnya, `Mobil` bisa `berjalan`, `berhenti`, dsb). |
-
-**Kode:**
-* **Kelas Abstrak:** Lihat `AbstractClass/Karyawan.java`
-* **Interface:** Lihat `Interface/BangunDatar.java`
+💡 **Contoh Kode:**  
+- Override → lihat `Mobil.java` menimpa method `info()` dari `Kendaraan.java`  
+- Overload → lihat `Kalkulator.java` dengan banyak method `tambah()`  
 
 ---
 
-#### 2. Override vs. Overload
+🎯 Kesimpulan
+Abstrak digunakan untuk membuat blueprint class (is-a).
 
-Kedua konsep ini merupakan wujud dari **polimorfisme**, yaitu kemampuan suatu objek untuk mengambil banyak bentuk.
+Interface digunakan untuk mendefinisikan kemampuan (can-do).
 
-| Konsep | **Method Overriding** | **Method Overloading** |
-| :--- | :--- | :--- |
-| **Definisi** | Menyediakan implementasi spesifik untuk metode yang sudah ada di kelas induk. | Mendefinisikan beberapa metode dengan nama yang sama tetapi dengan parameter yang berbeda dalam satu kelas. |
-| **Letak** | Terjadi di antara kelas induk dan kelas turunan (inheritance). | Terjadi dalam satu kelas yang sama. |
-| **Aturan** | Nama dan parameter **harus sama**. | Nama **sama**, tetapi jumlah atau tipe parameter **harus berbeda**. |
+Overriding menunjukkan dynamic polymorphism (perilaku berbeda meski nama method sama).
 
-**Kode:**
-* **`Override`**: Lihat bagaimana metode `info()` di `Mobil.java` menimpa metode `info()` dari `Kendaraan.java`.
-* **`Overload`**: Lihat bagaimana kelas `Kalkulator.java` memiliki beberapa metode `tambah()` dengan parameter yang berbeda.
+Overloading menunjukkan static polymorphism (method sama tapi parameter berbeda).
 
----
-
-### Cara Menjalankan Kode
-
-1.  **Clone Repositori:**
-    ```bash
-    git clone [URL-repositori-Anda]
-    ```
-2.  **Kompilasi:**
-    Pilih folder yang ingin Anda kompilasi (`AbstractClass`, `Interface`, atau `OverloadOverride`) dan jalankan perintah ini di terminal:
-    ```bash
-    cd [nama-folder]
-    javac *.java
-    ```
-3.  **Jalankan:**
-    ```bash
-    java [nama-kelas-utama]
-    ```
-    Contoh: `java MainAbstract` atau `java MainInterface`.
+🚀 Dengan memahami konsep ini, kita bisa membuat kode lebih modular, reusable, dan fleksibel.
